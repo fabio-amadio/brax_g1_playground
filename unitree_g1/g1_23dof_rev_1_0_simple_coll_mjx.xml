@@ -51,7 +51,7 @@
       <camera name="track" pos="0.846 -1.465 0.5" xyaxes="0.866 0.500 0.000 -0.171 0.296 0.940" mode="trackcom"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="black" mesh="pelvis"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="metallic" mesh="pelvis_contour_link"/>
-      <!-- <site name="imu_in_pelvis" size="0.01" pos="0.04525 0 -0.08339" group="4"/> -->
+      <site name="imu_in_pelvis" size="0.01" pos="0.04525 0 -0.08339" group="4"/>
       <body name="left_hip_pitch_link" pos="0 0.064452 -0.1027">
         <inertial pos="0.002741 0.047791 -0.02606" quat="0.954862 0.293964 0.0302556 0.030122" mass="1.35" diaginertia="0.00181517 0.00153422 0.00116212"/>
         <joint name="left_hip_pitch_joint" pos="0 0 0" axis="0 1 0" range="-2.5307 2.8798" actuatorfrcrange="-88 88"/>
@@ -76,10 +76,7 @@
                   <inertial pos="0.026505 0 -0.016425" quat="-0.000481092 0.728482 -0.000618967 0.685065" mass="0.608" diaginertia="0.00167218 0.0016161 0.000217621"/>
                   <joint name="left_ankle_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.2618 0.2618" actuatorfrcrange="-50 50"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="black" mesh="left_ankle_roll_link"/>
-                  <geom type="sphere" size="0.005" pos="-0.05 0.025 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="-0.05 -0.025 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="0.12 0.03 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="0.12 -0.03 -0.03" material="red_transparent" group="3"/>
+                  <geom type="box" pos="0.03592 0 -0.02517" size="0.101555 0.03235 0.009255" material="red_transparent" group="3"/>
                 </body>
               </body>
             </body>
@@ -110,10 +107,7 @@
                   <inertial pos="0.026505 0 -0.016425" quat="0.000481092 0.728482 0.000618967 0.685065" mass="0.608" diaginertia="0.00167218 0.0016161 0.000217621"/>
                   <joint name="right_ankle_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.2618 0.2618" actuatorfrcrange="-50 50"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="black" mesh="right_ankle_roll_link"/>
-                  <geom type="sphere" size="0.005" pos="-0.05 0.025 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="-0.05 -0.025 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="0.12 0.03 -0.03" material="red_transparent" group="3"/>
-                  <geom type="sphere" size="0.005" pos="0.12 -0.03 -0.03" material="red_transparent" group="3"/>
+                  <geom type="box" pos="0.03592 0 -0.02517" size="0.101555 0.03235 0.009255" material="red_transparent" group="3"/>
                 </body>
               </body>
             </body>
@@ -125,10 +119,10 @@
         <joint name="waist_yaw_joint" pos="0 0 0" axis="0 0 1" range="-2.618 2.618" actuatorfrcrange="-88 88"/>
         <geom pos="0.0039635 0 -0.044" type="mesh" contype="0" conaffinity="0" group="1" density="0" material="metallic" mesh="torso_link_23dof_rev_1_0"/>
         <!-- <geom pos="0.0039635 0 -0.044" type="mesh" material="red_transparent" mesh="torso_link_23dof_rev_1_0_coll" group="3"/> -->
-        <geom type="box" pos="0.01 0 0.14" size="0.07 0.10 0.14" material="red_transparent" group="3"/>
+        <geom type="box" pos="-0.0062 0 0.16476" size="0.06 0.110011 0.14488" material="red_transparent" group="3"/>
         <geom pos="0.0039635 0 -0.044" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" material="black" mesh="logo_link"/>
         <geom pos="0.0039635 0 -0.044" type="mesh" contype="0" conaffinity="0" group="1" density="0" material="black" mesh="head_link"/>
-        <!-- <site name="imu_in_torso" size="0.01" pos="-0.03959 -0.00224 0.14792" group="4"/> -->
+        <site name="imu_in_torso" size="0.01" pos="-0.03959 -0.00224 0.14792" group="4"/>
         <body name="left_shoulder_pitch_link" pos="0.0039563 0.10022 0.24778" quat="0.990264 0.139201 1.38722e-05 -9.86868e-05">
           <inertial pos="0 0.035892 -0.011628" quat="0.654152 0.0130458 -0.326267 0.68225" mass="0.718" diaginertia="0.000465864 0.000432842 0.000406394"/>
           <joint name="left_shoulder_pitch_joint" pos="0 0 0" axis="0 1 0" range="-3.0892 2.6704" actuatorfrcrange="-25 25"/>
@@ -152,7 +146,7 @@
                   <joint name="left_wrist_roll_joint" pos="0 0 0" axis="1 0 0" range="-1.97222 1.97222" actuatorfrcrange="-25 25"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="metallic" mesh="left_wrist_roll_rubber_hand"/>
                   <!-- <geom type="mesh" material="red_transparent" mesh="left_wrist_roll_rubber_hand_coll" group="3"/> -->
-                  <geom type="box" pos="0.185 -0.01 0.01" size="0.07 0.035 0.055" material="red_transparent" group="3"/>
+                  <geom type="box" pos="0.11 0.0 0.0" size="0.10 0.02 0.03" material="red_transparent" group="3"/>
                 </body>
               </body>
             </body>
@@ -181,7 +175,7 @@
                   <joint name="right_wrist_roll_joint" pos="0 0 0" axis="1 0 0" range="-1.97222 1.97222" actuatorfrcrange="-25 25"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" material="metallic" mesh="right_wrist_roll_rubber_hand"/>
                   <!-- <geom type="mesh" material="red_transparent" mesh="right_wrist_roll_rubber_hand_coll" group="3"/> -->
-                  <geom type="box" pos="0.185 0.01 0.01" size="0.07 0.035 0.055" material="red_transparent" group="3"/>
+                  <geom type="box" pos="0.11 0.0 0.0" size="0.10 0.02 0.03" material="red_transparent" group="3"/>
                 </body>
               </body>
             </body>
@@ -217,12 +211,12 @@
     <motor name="right_wrist_roll_joint" joint="right_wrist_roll_joint"/>
   </actuator>
 
-  <!-- <sensor>
+  <sensor>
     <gyro name="imu-torso-angular-velocity" site="imu_in_torso" noise="5e-4" cutoff="34.9"/>
     <accelerometer name="imu-torso-linear-acceleration" site="imu_in_torso" noise="1e-2" cutoff="157"/>
     <gyro name="imu-pelvis-angular-velocity" site="imu_in_pelvis" noise="5e-4" cutoff="34.9"/>
     <accelerometer name="imu-pelvis-linear-acceleration" site="imu_in_pelvis" noise="1e-2" cutoff="157"/>
-  </sensor> -->
+  </sensor>
 
   <keyframe>
     <key name="stand"
